@@ -1,0 +1,17 @@
+#header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 999999;
+	font-size: 20px;
+	padding: 0.5em 1em;
+	background-color: #fff;
+	color: #333;
+	display: flex;
+	align-items: center;
+	border-radius: 0 0 0 8px;
+}
+
+pre.prism-code {
+	font-family: 'dm' !important;
+}
