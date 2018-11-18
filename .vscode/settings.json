@@ -1,0 +1,13 @@
+{
+	"editor.formatOnSave": true,
+	"eslint.autoFixOnSave": true,
+	"[javascript]": {
+		"editor.formatOnSave": false
+	},
+	"[javascriptreact]": {
+		"editor.formatOnSave": false
+	},
+	"[mdx]": {
+		"editor.formatOnSave": false
+	}
+}

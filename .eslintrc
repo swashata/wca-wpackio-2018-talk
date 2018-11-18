@@ -1,0 +1,24 @@
+{
+	"extends": "@wpquark",
+	"env": {
+		"browser": true,
+		"node": true
+	},
+	"rules": {
+		"max-len": 0,
+		"no-magic-numbers": 0,
+		"react/prefer-es6-class": 0,
+		"react/no-multi-comp": 0,
+		"import/no-extraneous-dependencies": 0,
+		"react/jsx-filename-extension": "off",
+		"react/prop-types": "off"
+	},
+	"globals": {
+		"afterEach": true,
+		"describe": true,
+		"expect": true,
+		"it": true,
+		"jest": true,
+		"test": true
+	}
+}
