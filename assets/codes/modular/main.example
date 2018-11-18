@@ -1,0 +1,2 @@
+import mountApplication from './app';
+mountApplication(document.querySelector('#app'));

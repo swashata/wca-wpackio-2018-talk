@@ -4,6 +4,9 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 
+import './style.css';
+import './dank-mono.css';
+
 // Import Spectacle Core tags
 import {
 	Deck,
@@ -30,7 +33,7 @@ import {
 import createTheme from 'spectacle/lib/themes/default';
 
 // Images
-import dxgif from './images/dx.gif';
+import dxgif from '../assets/dx.gif';
 
 // Require CSS
 require('normalize.css');
@@ -171,7 +174,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/modular/app.js')}
+									source={require('raw-loader!../assets/codes/modular/app.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -191,7 +194,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/modular/main.js')}
+									source={require('raw-loader!../assets/codes/modular/main.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -245,7 +248,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/npm/main.js')}
+									source={require('raw-loader!../assets/codes/npm/main.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -288,7 +291,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/dynamic/app.js')}
+									source={require('raw-loader!../assets/codes/dynamic/app.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -308,7 +311,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/dynamic/main.js')}
+									source={require('raw-loader!../assets/codes/dynamic/main.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -352,7 +355,7 @@ export default class Presentation extends React.Component {
 									</Text>
 									<CodePane
 										lang="js"
-										source={require('./codes/noglobal/select.js')}
+										source={require('raw-loader!../assets/codes/noglobal/select.example')}
 										margin="20px auto"
 										overflow="scroll"
 										textSize={23}
@@ -371,7 +374,7 @@ export default class Presentation extends React.Component {
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('./codes/noglobal/main.js')}
+									source={require('raw-loader!../assets/codes/noglobal/main.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
