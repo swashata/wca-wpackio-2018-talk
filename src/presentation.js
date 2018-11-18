@@ -2,24 +2,28 @@
 
 // Import React
 import React from 'react';
+import ReactPlayer from 'react-player';
 
 // Import Spectacle Core tags
 import {
-	BlockQuote,
-	Cite,
 	Deck,
 	Heading,
 	ListItem,
 	List,
-	Quote,
 	Slide,
 	Text,
 	Layout,
-	Fit,
 	Fill,
 	Image,
 	Appear,
 	CodePane,
+	Link,
+	Table,
+	TableRow,
+	TableHeaderItem,
+	TableItem,
+	TableHeader,
+	TableBody,
 } from 'spectacle';
 
 // Import theme
@@ -119,15 +123,15 @@ export default class Presentation extends React.Component {
 								</ListItem>
 							</Appear>
 							<Appear>
-								<ListItem>ES Module System</ListItem>
+								<ListItem>ES Module System.</ListItem>
 							</Appear>
 							<Appear>
 								<ListItem>
-									CSS compilers and pre-processors
+									CSS compilers and pre-processors.
 								</ListItem>
 							</Appear>
 							<Appear>
-								<ListItem>Build time optimizations</ListItem>
+								<ListItem>Build time optimizations.</ListItem>
 							</Appear>
 						</List>
 					</Slide>
@@ -153,40 +157,48 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="quartenary"
 						>
-							Modular codebase
+							ES6 Modules
 						</Heading>
-						<Text
-							textAlign="left"
-							italic
-							textColor="primary"
-							textFont="dm"
-						>
-							app.js
-						</Text>
-						<CodePane
-							lang="js"
-							source={require('./codes/modular/app.js')}
-							margin="20px auto"
-							overflow="scroll"
-							textSize={23}
-							textFont="dm"
-						/>
-						<Text
-							textAlign="left"
-							italic
-							textColor="primary"
-							textFont="dm"
-						>
-							main.js
-						</Text>
-						<CodePane
-							lang="js"
-							source={require('./codes/modular/main.js')}
-							margin="20px auto"
-							overflow="scroll"
-							textSize={23}
-							textFont="dm"
-						/>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									app.js
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('./codes/modular/app.js')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									main.js
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('./codes/modular/main.js')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
 					</Slide>
 
 					<Slide
@@ -202,37 +214,45 @@ export default class Presentation extends React.Component {
 						>
 							Npm Packages
 						</Heading>
-						<Text
-							textAlign="left"
-							italic
-							textColor="primary"
-							textFont="dm"
-						>
-							install
-						</Text>
-						<CodePane
-							source="npm i lodash axios"
-							margin="20px auto"
-							overflow="scroll"
-							textSize={23}
-							textFont="dm"
-						/>
-						<Text
-							textAlign="left"
-							italic
-							textColor="primary"
-							textFont="dm"
-						>
-							main.js
-						</Text>
-						<CodePane
-							lang="js"
-							source={require('./codes/npm/main.js')}
-							margin="20px auto"
-							overflow="scroll"
-							textSize={23}
-							textFont="dm"
-						/>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									install
+								</Text>
+								<CodePane
+									source="npm i lodash axios"
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									main.js
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('./codes/npm/main.js')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
 					</Slide>
 
 					<Slide
@@ -256,28 +276,28 @@ export default class Presentation extends React.Component {
 						>
 							Load code on-demand, based on user-interaction.
 						</Heading>
-						<Layout>
-							<Fill>
-								<div style={{ marginRight: '10px' }}>
-									<Text
-										textAlign="left"
-										italic
-										textColor="primary"
-										textFont="dm"
-									>
-										app.js
-									</Text>
-									<CodePane
-										lang="js"
-										source={require('./codes/dynamic/app.js')}
-										margin="20px auto"
-										overflow="scroll"
-										textSize={23}
-										textFont="dm"
-									/>
-								</div>
-							</Fill>
-							<Fill>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									app.js
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('./codes/dynamic/app.js')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
+						<Appear>
+							<div>
 								<Text
 									textAlign="left"
 									italic
@@ -294,8 +314,8 @@ export default class Presentation extends React.Component {
 									textSize={23}
 									textFont="dm"
 								/>
-							</Fill>
-						</Layout>
+							</div>
+						</Appear>
 					</Slide>
 
 					<Slide
@@ -309,7 +329,7 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="quartenary"
 						>
-							No JS Conflict
+							And More
 						</Heading>
 						<Heading
 							margin="0 auto 50px auto"
@@ -317,9 +337,9 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							your code does not depend upon browser globals.
+							but most importantly!!
 						</Heading>
-						<Layout>
+						{/* <Layout>
 							<Fill>
 								<div style={{ marginRight: '10px' }}>
 									<Text
@@ -358,13 +378,13 @@ export default class Presentation extends React.Component {
 									textFont="dm"
 								/>
 							</Fill>
-						</Layout>
+						</Layout> */}
 					</Slide>
 
 					<Slide>
 						<Heading
 							margin="0 auto 20px auto"
-							size={2}
+							size={1}
 							caps
 							textColor="quartenary"
 						>
@@ -372,7 +392,7 @@ export default class Presentation extends React.Component {
 						</Heading>
 						<Heading
 							margin="0 auto 50px auto"
-							size={4}
+							size={3}
 							textSize={32}
 							textColor="tertiary"
 						>
@@ -387,7 +407,7 @@ export default class Presentation extends React.Component {
 					>
 						<Heading
 							margin="0 auto 20px auto"
-							size={2}
+							size={1}
 							caps
 							textColor="quartenary"
 						>
@@ -414,8 +434,34 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							video explanation
+							Todo Application with react & webpack
 						</Heading>
+						<Layout>
+							<Fill>
+								<div className="player-wrapper">
+									<ReactPlayer
+										config={{
+											youtube: {
+												preload: true,
+												playerVars: {
+													fs: 1,
+												},
+											},
+										}}
+										className="react-player"
+										width="100%"
+										height="100%"
+										url="https://youtu.be/p_2DSvBOaFE"
+									/>
+								</div>
+							</Fill>
+						</Layout>
+						<Link
+							href="https://youtu.be/p_2DSvBOaFE"
+							target="_blank"
+						>
+							URL
+						</Link>
 					</Slide>
 
 					<Slide
@@ -515,6 +561,15 @@ export default class Presentation extends React.Component {
 							>
 								webpack and browser-sync based front-end tooling
 								for WordPress
+								<br />
+								<em
+									style={{
+										fontFamily: 'dm',
+										fontSize: '.7em',
+									}}
+								>
+									(OSS - MIT Licensed)
+								</em>
 							</Heading>
 						</Appear>
 						<List>
@@ -560,8 +615,26 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							video explanation
+							developing with wpackio-scripts
 						</Heading>
+						<Layout>
+							<Fill>
+								<div className="player-wrapper">
+									<ReactPlayer
+										className="react-player"
+										width="100%"
+										height="100%"
+										url="https://youtu.be/6Jmiy0mb6P8"
+									/>
+								</div>
+							</Fill>
+						</Layout>
+						<Link
+							href="https://youtu.be/6Jmiy0mb6P8"
+							target="_blank"
+						>
+							URL
+						</Link>
 					</Slide>
 
 					<Slide>
@@ -625,6 +698,29 @@ export default class Presentation extends React.Component {
 					</Slide>
 
 					<Slide
+						transition={['spin']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={2}
+							caps
+							textColor="quartenary"
+						>
+							Thank you!
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							to everyone, and WCA for giving me the opportunity
+						</Heading>
+					</Slide>
+
+					<Slide
 						transition={['fade']}
 						bgColor="primary"
 						textColor="secondary"
@@ -637,19 +733,46 @@ export default class Presentation extends React.Component {
 						>
 							NOTES
 						</Heading>
-						<List>
-							<ListItem>Slide: https://wca.wpack.io</ListItem>
-							<ListItem>Docs: https://wpack.io</ListItem>
-							<ListItem>
-								Standalone webpack-dev-server:{' '}
-								<a href="https://git.io/fpc4Q">
-									https://git.io/fpc4Q
-								</a>
-							</ListItem>
-							<ListItem>
-								WordPress Plugin Example: <a href="#">#</a>
-							</ListItem>
-						</List>
+						<Table>
+							<TableHeader>
+								<TableHeaderItem />
+								<TableHeaderItem>Link</TableHeaderItem>
+							</TableHeader>
+							<TableBody>
+								<TableRow>
+									<TableItem>Slide</TableItem>
+									<TableItem>
+										<a href="https://wca.wpack.io">
+											https://wca.wpack.io
+										</a>
+									</TableItem>
+								</TableRow>
+								<TableRow>
+									<TableItem>Docs</TableItem>
+									<TableItem>
+										<a href="https://wpack.io">
+											https://wpack.io
+										</a>
+									</TableItem>
+								</TableRow>
+								<TableRow>
+									<TableItem>Webpack demo</TableItem>
+									<TableItem>
+										<a href="https://git.io/fpcEo">
+											https://git.io/fpcEo
+										</a>
+									</TableItem>
+								</TableRow>
+								<TableRow>
+									<TableItem>wpack.io demo</TableItem>
+									<TableItem>
+										<a href="https://git.io/fpcEK">
+											https://git.io/fpcEK
+										</a>
+									</TableItem>
+								</TableRow>
+							</TableBody>
+						</Table>
 					</Slide>
 				</Deck>
 			</React.Fragment>
