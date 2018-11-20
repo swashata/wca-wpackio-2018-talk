@@ -123,7 +123,7 @@ or deploy it.
 
 Imaging yourself in a scenario where you are developing in a language that
 requires to compile itself. So for every changes you make, you have compile it,
-run it against the newly compiled source and check the development.
+run it against the newly compiled source and check the output.
 
 When we, WordPress developers are creating a plugin or a theme, how often do
 we find ourselves changing a javascript, PHP or a CSS file and then refreshing
@@ -131,8 +131,6 @@ the browser to check the output?
 
 So the question is, can modern front-end tooling improve this experience? If so,
 how?
-
-Let us see an example.
 
 ## Example Webpack
 
@@ -152,21 +150,21 @@ We also import our own code. Then, when the document is ready, we ask ReactDOM
 to render our application in a particular DOM node.
 
 [show index.html]
-This DOM node, along with our scripts are all written in the `index.html` file,
+This DOM node, along with our scripts are all linked in the `index.html` file,
 which serves our app.
 
 Here you can see, we are expecting a file from `dist/bundle.js` and webpack is
 going to generate that for us.
 
 So it is time we go and tell webpack, hey I want you to compile this `app.js`
-files and make sure it somehow has all the dependencies it needs.
+files and make sure somehow it has all the dependencies it needs.
 
 [show webpack.config.js]
 To do that, we create a file called `webpack.config.js` at the root of the project
 and define the `entry`. We also mention the output filename and where to put the
 file.
 
-We do need to tell webpack, which other `loaders` it needs to handle the imports.
+We do need to tell webpack, which other `loaders` it needs, to handle the imports.
 For javascript we have told webpack to use `babel-loader`, which in turn is going
 to use `babel`. For CSS or SASS, we are going to use these three loaders in this
 particular order.

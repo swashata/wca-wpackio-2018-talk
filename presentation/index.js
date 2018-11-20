@@ -607,6 +607,17 @@ export default class Presentation extends React.Component {
 						</Appear>
 						<Appear>
 							<Heading
+								margin="0 auto 50px auto"
+								size={4}
+								textSize={32}
+								bold={false}
+								textColor="tertiary"
+							>
+								how do I have webpack-dev-server for HMR?
+							</Heading>
+						</Appear>
+						<Appear>
+							<Heading
 								margin="0 auto 20px auto"
 								size={2}
 								caps
