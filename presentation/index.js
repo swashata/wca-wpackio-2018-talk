@@ -23,10 +23,9 @@ import {
 	Link,
 	Table,
 	TableRow,
-	TableHeaderItem,
 	TableItem,
-	TableHeader,
 	TableBody,
+	Code,
 } from 'spectacle';
 
 // Import theme
@@ -147,6 +146,61 @@ export default class Presentation extends React.Component {
 						<Heading size={1} caps textColor="quartenary">
 							What benefits?
 						</Heading>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 50px auto"
+							size={2}
+							caps
+							textColor="quartenary"
+						>
+							ESNext
+						</Heading>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									swap ES5
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('raw-loader!../assets/codes/esnext/es5.example')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
+						<Appear>
+							<div>
+								<Text
+									textAlign="left"
+									italic
+									textColor="primary"
+									textFont="dm"
+								>
+									swap ESNext
+								</Text>
+								<CodePane
+									lang="js"
+									source={require('raw-loader!../assets/codes/esnext/es6.example')}
+									margin="20px auto"
+									overflow="scroll"
+									textSize={23}
+									textFont="dm"
+								/>
+							</div>
+						</Appear>
 					</Slide>
 
 					<Slide
@@ -342,46 +396,6 @@ export default class Presentation extends React.Component {
 						>
 							but most importantly!!
 						</Heading>
-						{/* <Layout>
-							<Fill>
-								<div style={{ marginRight: '10px' }}>
-									<Text
-										textAlign="left"
-										italic
-										textColor="primary"
-										textFont="dm"
-									>
-										select.js
-									</Text>
-									<CodePane
-										lang="js"
-										source={require('raw-loader!../assets/codes/noglobal/select.example')}
-										margin="20px auto"
-										overflow="scroll"
-										textSize={23}
-										textFont="dm"
-									/>
-								</div>
-							</Fill>
-							<Fill>
-								<Text
-									textAlign="left"
-									italic
-									textColor="primary"
-									textFont="dm"
-								>
-									main.js
-								</Text>
-								<CodePane
-									lang="js"
-									source={require('raw-loader!../assets/codes/noglobal/main.example')}
-									margin="20px auto"
-									overflow="scroll"
-									textSize={23}
-									textFont="dm"
-								/>
-							</Fill>
-						</Layout> */}
 					</Slide>
 
 					<Slide>
@@ -422,8 +436,34 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							let us take a look at webpack dev server
+							let us take a look at an example
 						</Heading>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="quartenary"
+						>
+							Webpack
+						</Heading>
+						<List>
+							<ListItem>
+								Write an entry-point javascript file.
+							</ListItem>
+							<ListItem>
+								Tell webpack to use the entry-point.
+							</ListItem>
+							<ListItem>use different loaders.</ListItem>
+							<ListItem>implement HMR.</ListItem>
+							<ListItem>🔥 up with webpack-dev-server.</ListItem>
+						</List>
 					</Slide>
 
 					<Slide
@@ -613,6 +653,57 @@ export default class Presentation extends React.Component {
 						textColor="primary"
 					>
 						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							textColor="quartenary"
+							caps
+						>
+							Integrate
+						</Heading>
+						<List>
+							<ListItem>
+								Add -{' '}
+								<Code textColor="quartenary">
+									npx @wpackio/cli
+								</Code>
+							</ListItem>
+							<ListItem>
+								Bootstrap -{' '}
+								<Code textColor="quartenary">
+									npm run bootstrap
+								</Code>
+							</ListItem>
+							<ListItem>
+								PHP -{' '}
+								<Code textColor="quartenary">
+									composer require wpackio/enqueue
+								</Code>
+							</ListItem>
+							<ListItem>
+								Server -{' '}
+								<Code textColor="quartenary">npm start</Code>
+							</ListItem>
+							<ListItem>
+								Buid -{' '}
+								<Code textColor="quartenary">
+									npm run build
+								</Code>
+							</ListItem>
+							<ListItem>
+								Pack -{' '}
+								<Code textColor="quartenary">
+									npm run archive
+								</Code>
+							</ListItem>
+						</List>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
 							margin="0 auto 50px auto"
 							size={4}
 							textSize={32}
@@ -695,7 +786,7 @@ export default class Presentation extends React.Component {
 								caps
 								textColor="quartenary"
 							>
-								WAS IT AWESOME??
+								WAS IT FUN??
 							</Heading>
 						</Appear>
 					</Slide>
@@ -737,10 +828,6 @@ export default class Presentation extends React.Component {
 							NOTES
 						</Heading>
 						<Table>
-							<TableHeader>
-								<TableHeaderItem />
-								<TableHeaderItem>Link</TableHeaderItem>
-							</TableHeader>
 							<TableBody>
 								<TableRow>
 									<TableItem>Slide</TableItem>
