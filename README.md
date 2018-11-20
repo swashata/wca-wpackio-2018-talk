@@ -1,48 +1,19 @@
-# Spectacle Boilerplate
+# Slides for WCA 2018 Talk
 
-## Contents
+## Front-end tooling and DX for WordPress Themes and Development
 
-- [Reference](#reference)
-- [Getting Started](#getting-started)
-- [Build & Deployment](#build-deployment)
+This presentation is made using [Spectacle](https://github.com/FormidableLabs/spectacle/).
 
-## Reference
-
-The Spectacle core API is available at [https://github.com/FormidableLabs/spectacle/blob/master/README.md](https://github.com/FormidableLabs/spectacle/blob/master/README.md).
-
-## Getting Started
-
-After downloading the boilerplate, your first order of business is to open a terminal and run 
 ```bash
 yarn
-```
-or 
-```bash
-npm install
-```
-if you're about that life.
-
-Next, run 
-```bash
-rm -R .git
-```
-to remove the existing version control.
-
-Then, to start up the local server, run
-```bash
-npm start
+yarn start
 ```
 
-Open a browser and hit [http://localhost:3000](http://localhost:3000), and we are ready to roll.
+And access from `http://localhost:5000`.
 
-## Build & Deployment
+-   [Insight](insight.md).
+-   [Script](script.md).
 
-Building the dist version of the project is as easy as running
-```bash
-npm run build
-```
+## License
 
-If you want to deploy the slideshow to surge, run 
-```bash
-npm run deploy
-```
+[GPL-3.0](https://opensource.org/licenses/GPL-3.0).
