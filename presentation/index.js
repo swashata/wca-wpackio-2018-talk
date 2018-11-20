@@ -265,6 +265,41 @@ export default class Presentation extends React.Component {
 					>
 						<Heading
 							margin="0 auto 50px auto"
+							size={4}
+							textColor="tertiary"
+						>
+							modular codebase
+						</Heading>
+						<List>
+							<Appear>
+								<ListItem>easy for team to work with.</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>
+									easy to (unit) test in separation.
+								</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>
+									easy to integration test main app under
+									JSDOM/JEST.
+								</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>
+									easy to refactor and scale for larger apps.
+								</ListItem>
+							</Appear>
+						</List>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 50px auto"
 							size={2}
 							caps
 							textColor="quartenary"
