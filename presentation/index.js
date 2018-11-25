@@ -42,7 +42,8 @@ const theme = createTheme(
 		primary: 'white',
 		secondary: '#1F2022',
 		tertiary: '#03A9FC',
-		quartenary: '#d81b60',
+		pink: '#d81b60',
+		quaternary: '#ccc',
 	},
 	{
 		primary: 'Montserrat',
@@ -93,7 +94,12 @@ export default class Presentation extends React.Component {
 						>
 							front-end tooling for WordPress Themes and Plugins
 						</Heading>
-						<Image src={dxgif} margin="0 auto 20px auto" />
+						<Image
+							src={dxgif}
+							margin="0 auto 20px auto"
+							height={220}
+							width={300}
+						/>
 						<Heading
 							size={1}
 							fit
@@ -151,7 +157,7 @@ export default class Presentation extends React.Component {
 						bgColor="secondary"
 						textColor="tertiary"
 					>
-						<Heading size={1} caps textColor="quartenary">
+						<Heading size={1} caps textColor="pink">
 							What benefits?
 						</Heading>
 					</Slide>
@@ -165,7 +171,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 50px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							ESNext
 						</Heading>
@@ -220,7 +226,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 50px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							ES6 Modules
 						</Heading>
@@ -310,7 +316,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 50px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Npm Packages
 						</Heading>
@@ -364,7 +370,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Dynamic Import
 						</Heading>
@@ -427,7 +433,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							And More
 						</Heading>
@@ -446,7 +452,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={1}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							AWESOME DX
 						</Heading>
@@ -469,7 +475,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={1}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							DX...What?
 						</Heading>
@@ -513,7 +519,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={1}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Webpack
 						</Heading>
@@ -554,7 +560,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={1}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Setup App
 						</Heading>
@@ -629,7 +635,7 @@ export default class Presentation extends React.Component {
 								margin="0 auto 20px auto"
 								size={2}
 								caps
-								textColor="quartenary"
+								textColor="pink"
 							>
 								YES
 							</Heading>
@@ -690,7 +696,7 @@ export default class Presentation extends React.Component {
 								margin="0 auto 20px auto"
 								size={2}
 								caps
-								textColor="quartenary"
+								textColor="pink"
 							>
 								Let us See
 							</Heading>
@@ -770,7 +776,7 @@ export default class Presentation extends React.Component {
 						<Heading
 							margin="0 auto 20px auto"
 							size={1}
-							textColor="quartenary"
+							textColor="pink"
 							caps
 						>
 							Integrate
@@ -778,37 +784,28 @@ export default class Presentation extends React.Component {
 						<List>
 							<ListItem>
 								Add -{' '}
-								<Code textColor="quartenary">
-									npx @wpackio/cli
-								</Code>
+								<Code textColor="pink">npx @wpackio/cli</Code>
 							</ListItem>
 							<ListItem>
 								Bootstrap -{' '}
-								<Code textColor="quartenary">
-									npm run bootstrap
-								</Code>
+								<Code textColor="pink">npm run bootstrap</Code>
 							</ListItem>
 							<ListItem>
 								PHP -{' '}
-								<Code textColor="quartenary">
+								<Code textColor="pink">
 									composer require wpackio/enqueue
 								</Code>
 							</ListItem>
 							<ListItem>
-								Server -{' '}
-								<Code textColor="quartenary">npm start</Code>
+								Server - <Code textColor="pink">npm start</Code>
 							</ListItem>
 							<ListItem>
 								Build -{' '}
-								<Code textColor="quartenary">
-									npm run build
-								</Code>
+								<Code textColor="pink">npm run build</Code>
 							</ListItem>
 							<ListItem>
 								Pack -{' '}
-								<Code textColor="quartenary">
-									npm run archive
-								</Code>
+								<Code textColor="pink">npm run archive</Code>
 							</ListItem>
 						</List>
 					</Slide>
@@ -851,7 +848,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							But How?
 						</Heading>
@@ -899,7 +896,7 @@ export default class Presentation extends React.Component {
 								margin="0 auto 20px auto"
 								size={2}
 								caps
-								textColor="quartenary"
+								textColor="pink"
 							>
 								WAS IT FUN??
 							</Heading>
@@ -915,7 +912,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Recap
 						</Heading>
@@ -948,7 +945,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							Thank you!
 						</Heading>
@@ -971,7 +968,7 @@ export default class Presentation extends React.Component {
 							margin="0 auto 20px auto"
 							size={2}
 							caps
-							textColor="quartenary"
+							textColor="pink"
 						>
 							NOTES
 						</Heading>
@@ -1002,10 +999,18 @@ export default class Presentation extends React.Component {
 									</TableItem>
 								</TableRow>
 								<TableRow>
-									<TableItem>wpack.io demo</TableItem>
+									<TableItem>wordpress demo</TableItem>
 									<TableItem>
 										<a href="https://git.io/fpcEK">
 											https://git.io/fpcEK
+										</a>
+									</TableItem>
+								</TableRow>
+								<TableRow>
+									<TableItem>slides</TableItem>
+									<TableItem>
+										<a href="https://git.io/fpEex">
+											https://git.io/fpEex
 										</a>
 									</TableItem>
 								</TableRow>
@@ -1018,7 +1023,7 @@ export default class Presentation extends React.Component {
 						bgColor="secondary"
 						textColor="primary"
 					>
-						<Heading size={1} caps textColor="quartenary">
+						<Heading size={1} caps textColor="pink">
 							Q/A
 						</Heading>
 					</Slide>
