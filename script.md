@@ -19,10 +19,13 @@ it gives. Hopefully not the like the one in the gif.
 
 ## Terrain
 
-So before we begin, let us see what the modern front-end terrain looks like. Well
-for web front-end, we have only one programming language, JavaScript, which is super cool bdw.
+So before we begin, let us see what the modern front-end terrain looks like.
 
-So we use all the new ES6+ javascript features. We use ES Module systems, CSS
+Front-end web development basically deals with JavaScript, CSS and HTML. So when
+we add the term modern to it, we basically mean utilizing the newer language
+features and tooling.
+
+We use all the new ES6+ javascript features. We use ES Module systems, CSS
 compilers and pre-processors, as well as some build time optimizations.
 
 ---
@@ -40,12 +43,10 @@ The first one is obvious using the latest ES6+ JavaScript features. Now there
 are many new things to cover here, but I would like to show just my personal
 favorite, the destructing statements.
 
-Say, if we were to swap a variable in JavaScript, how would be do?
+At first we see, what the code would look like if we were to swap two variables.
 
-We would create a third temporary variable, put the value of the first, assign
-second to the first and then finally assign the temporary one to the second.
-
-Now using array destructuring, it is just one line away.
+Now if we were using ES6, this is how we would do, with the help of array
+destructuring.
 
 ---
 
@@ -135,7 +136,24 @@ how?
 ## Example Webpack
 
 Let us pick `webpack` as the primary tooling and develop a simple react based
-todo application. So what do we need to do to set things up?
+todo application.
+
+> simply speaking webpack is a static module bundler for modern JavaScript applications.
+
+With webpack, javascript and css modules.
+
+It can manage and optimize fonts, images and all other sorts of files.
+
+Under the hood, we can instruct webpack to use babel for compiling javascript
+or node-sass for compiling sass files.
+
+## Setup
+
+So what do we need to set things up?
+
+[Read from presentation].
+
+## Demo
 
 [show package.json]
 Firstly we need to use nodejs and npm to install the tooling. Here in this project
@@ -253,11 +271,8 @@ You can integrate with any on-going projects.
 Under the hood, it does provide a dev server with all the HMR goodies. That
 dev server is basically a proxy of your WordPress dev server.
 
-Now that didn't make any sense I guess, so let us see another demo.
-
-Oh and bdw, this whole thing requires 3 commands to setup and 3 more commands
-to start, build and pack. Let us like really really see, what I am blabbering
-about.
+This whole thing requires 3 commands to setup and 3 more commands
+to start, build and pack.
 
 ## Integrate
 
@@ -293,8 +308,8 @@ rest is taken care for us.
 
 [show wpackio.server.js]
 Now only thing left it to tell wpackio-scripts about our own development server.
-Here I am using docker which gives me a WordPress server at localhost:8080.
-But it could be anything, perhaps vvv, or wamp or mamp.
+Here I am using vvv which gives me a WordPress server at wca.test.
+But it could be anything, perhaps docker, or wamp or mamp.
 
 [run command]
 So let us run the command and see what happens.
@@ -313,7 +328,7 @@ We press q or ctrl+c.
 
 And we run `npm run build`.
 
-[open localhost:8080/todo-application]
+[open wca.test]
 Let's open our WordPress dev server directly here.
 
 Alright awesome todos.
@@ -324,7 +339,8 @@ Well that is one single command away too.
 
 [run npm run archive]
 
-That's great right? No more boring stuff anymore!!
+Now that comes really handy to incorporate continuous integration or continuous
+deployment to your workflow.
 
 ## But How?
 
@@ -339,10 +355,18 @@ middlewares which provides us the hot proxy server.
 
 So let me ask you this. Was it fun?
 
+## Recap
+
+Let's take a step back and revisit what we learnt today.
+
+Front-end tooling is
+
+[read from presentation].
+
 ## Thank you
 
 Thank you everyone, for following through my presentation here. I know I have
-messed a few things up and hopefully I won't do the same again when we all come
+messed a few things up and hopefully I won't, when we all come
 back next year, yeah?
 
 And I would like to thank the awesome organizers of WCA, who gave me the opportunity

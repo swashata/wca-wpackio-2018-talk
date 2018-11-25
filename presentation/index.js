@@ -80,6 +80,7 @@ export default class Presentation extends React.Component {
 								Blog: <code>swas.io</code>
 							</ListItem>
 						</List>
+						<Heading size={4}>I ❤️ WordPress & JavaScript.</Heading>
 					</Slide>
 
 					<Slide transition={['zoom']} bgColor="primary">
@@ -118,6 +119,13 @@ export default class Presentation extends React.Component {
 							Modern front-end terrain
 						</Heading>
 						<List>
+							<Appear>
+								<ListItem>
+									<code>
+										front-end web === JS, CSS, HTML.
+									</code>
+								</ListItem>
+							</Appear>
 							<Appear>
 								<ListItem>
 									all new <code>ES6+</code> javascript
@@ -189,7 +197,7 @@ export default class Presentation extends React.Component {
 									textColor="primary"
 									textFont="dm"
 								>
-									swap ESNext
+									swap (array destructuring)
 								</Text>
 								<CodePane
 									lang="js"
@@ -471,8 +479,29 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							let us take a look at an example
+							experience we get while developing.
 						</Heading>
+						<List>
+							<Appear>
+								<ListItem>Language features.</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>Tooling.</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>Build and Deploy.</ListItem>
+							</Appear>
+						</List>
+						<Appear>
+							<Heading
+								margin="0 auto 50px auto"
+								size={4}
+								textSize={32}
+								textColor="tertiary"
+							>
+								how modern tooling helps?
+							</Heading>
+						</Appear>
 					</Slide>
 
 					<Slide
@@ -488,6 +517,47 @@ export default class Presentation extends React.Component {
 						>
 							Webpack
 						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							static module bundler for modern JavaScript
+							applications.
+						</Heading>
+						<List>
+							<Appear>
+								<ListItem>
+									modular JS/CSS code and imports.
+								</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>
+									fonts, images and other files.
+								</ListItem>
+							</Appear>
+							<Appear>
+								<ListItem>
+									can use babel, node-sass under the hood.
+								</ListItem>
+							</Appear>
+						</List>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="quartenary"
+						>
+							Setup App
+						</Heading>
 						<List>
 							<ListItem>
 								Write an entry-point javascript file.
@@ -496,8 +566,7 @@ export default class Presentation extends React.Component {
 								Tell webpack to use the entry-point.
 							</ListItem>
 							<ListItem>use different loaders.</ListItem>
-							<ListItem>implement HMR.</ListItem>
-							<ListItem>🔥 up with webpack-dev-server.</ListItem>
+							<ListItem>🔥 HMR with webpack-dev-server.</ListItem>
 						</List>
 					</Slide>
 
@@ -730,7 +799,7 @@ export default class Presentation extends React.Component {
 								<Code textColor="quartenary">npm start</Code>
 							</ListItem>
 							<ListItem>
-								Buid -{' '}
+								Build -{' '}
 								<Code textColor="quartenary">
 									npm run build
 								</Code>
@@ -838,6 +907,39 @@ export default class Presentation extends React.Component {
 					</Slide>
 
 					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={2}
+							caps
+							textColor="quartenary"
+						>
+							Recap
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							front-end tooling
+						</Heading>
+						<List>
+							<ListItem>provides awesome DX.</ListItem>
+							<ListItem>is easier to setup today.</ListItem>
+							<ListItem>
+								is essential to create modern apps.
+							</ListItem>
+							<ListItem>
+								can be integrated with WP development.
+							</ListItem>
+						</List>
+					</Slide>
+
+					<Slide
 						transition={['spin']}
 						bgColor="secondary"
 						textColor="primary"
@@ -909,6 +1011,16 @@ export default class Presentation extends React.Component {
 								</TableRow>
 							</TableBody>
 						</Table>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading size={1} caps textColor="quartenary">
+							Q/A
+						</Heading>
 					</Slide>
 				</Deck>
 			</React.Fragment>
