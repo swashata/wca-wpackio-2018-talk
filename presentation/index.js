@@ -125,41 +125,13 @@ export default class Presentation extends React.Component {
 							Modern front-end terrain
 						</Heading>
 						<List>
-							<Appear>
-								<ListItem>
-									<code>
-										front-end web === JS, CSS, HTML.
-									</code>
-								</ListItem>
-							</Appear>
-							<Appear>
-								<ListItem>
-									all new <code>ES6+</code> javascript
-									features.
-								</ListItem>
-							</Appear>
-							<Appear>
-								<ListItem>ES Module System.</ListItem>
-							</Appear>
-							<Appear>
-								<ListItem>
-									CSS compilers and pre-processors.
-								</ListItem>
-							</Appear>
-							<Appear>
-								<ListItem>Build time optimizations.</ListItem>
-							</Appear>
+							<ListItem>
+								<code>front-end web === JS, CSS, HTML.</code>
+							</ListItem>
+							<ListItem>new language features.</ListItem>
+							<ListItem>development tooling.</ListItem>
+							<ListItem>large scale web application.</ListItem>
 						</List>
-					</Slide>
-
-					<Slide
-						transition={['slide']}
-						bgColor="secondary"
-						textColor="tertiary"
-					>
-						<Heading size={1} caps textColor="pink">
-							What benefits?
-						</Heading>
 					</Slide>
 
 					<Slide
@@ -173,7 +145,41 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="pink"
 						>
-							ESNext
+							ES6
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							ECMAScript2015
+						</Heading>
+						<List>
+							<ListItem>
+								<code>ECMAScript === JavaScript</code>
+							</ListItem>
+							<ListItem>
+								released in 2015, 4 years after ES5
+							</ListItem>
+							<ListItem>
+								easier large-scale software development.
+							</ListItem>
+						</List>
+					</Slide>
+
+					{/* <Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 50px auto"
+							size={2}
+							caps
+							textColor="pink"
+						>
+							Array Destructuring
 						</Heading>
 						<Appear>
 							<div>
@@ -215,7 +221,7 @@ export default class Presentation extends React.Component {
 								/>
 							</div>
 						</Appear>
-					</Slide>
+					</Slide> */}
 
 					<Slide
 						transition={['fade']}
@@ -228,7 +234,7 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="pink"
 						>
-							ES6 Modules
+							Modules
 						</Heading>
 						<Appear>
 							<div>
@@ -372,7 +378,7 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="pink"
 						>
-							Dynamic Import
+							Code Splitting
 						</Heading>
 						<Heading
 							margin="0 auto 50px auto"
@@ -382,6 +388,7 @@ export default class Presentation extends React.Component {
 						>
 							Load code on-demand, based on user-interaction.
 						</Heading>
+
 						<Appear>
 							<div>
 								<Text
@@ -390,11 +397,11 @@ export default class Presentation extends React.Component {
 									textColor="primary"
 									textFont="dm"
 								>
-									app.js
+									main.js
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('raw-loader!../assets/codes/dynamic/app.example')}
+									source={require('raw-loader!../assets/codes/dynamic/main.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -410,11 +417,11 @@ export default class Presentation extends React.Component {
 									textColor="primary"
 									textFont="dm"
 								>
-									main.js
+									app.js
 								</Text>
 								<CodePane
 									lang="js"
-									source={require('raw-loader!../assets/codes/dynamic/main.example')}
+									source={require('raw-loader!../assets/codes/dynamic/app.example')}
 									margin="20px auto"
 									overflow="scroll"
 									textSize={23}
@@ -521,7 +528,67 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="pink"
 						>
-							Webpack
+							#1. Babel
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							Use next generation JavaScript, today.
+						</Heading>
+						<List>
+							<ListItem>compile ES6+ code.</ListItem>
+							<ListItem>target your browsers.</ListItem>
+						</List>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="pink"
+						>
+							#2. SASS
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							CSS with superpowers
+						</Heading>
+						<List>
+							<ListItem>super-set of CSS.</ListItem>
+							<ListItem>
+								sweet features to make CSS scale.
+							</ListItem>
+							<ListItem>
+								compile sass to css with <code>node-sass</code>{' '}
+								or <code>dart-sass</code>.
+							</ListItem>
+						</List>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="pink"
+						>
+							#3. Webpack
 						</Heading>
 						<Heading
 							margin="0 auto 50px auto"
@@ -757,18 +824,10 @@ export default class Presentation extends React.Component {
 									proxy dev server with live reload and HMR.
 								</ListItem>
 							</Appear>
-							<Appear>
-								<ListItem>3 commands to setup.</ListItem>
-							</Appear>
-							<Appear>
-								<ListItem>
-									3 commands to start, build and pack.
-								</ListItem>
-							</Appear>
 						</List>
 					</Slide>
 
-					<Slide
+					{/* <Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -808,7 +867,7 @@ export default class Presentation extends React.Component {
 								<Code textColor="pink">npm run archive</Code>
 							</ListItem>
 						</List>
-					</Slide>
+					</Slide> */}
 
 					<Slide
 						transition={['fade']}
