@@ -33,6 +33,7 @@ import createTheme from 'spectacle/lib/themes/default';
 
 // Images
 import dxgif from '../assets/dx.gif';
+import cover from '../assets/cover.png';
 
 // Require CSS
 require('normalize.css');
@@ -62,26 +63,7 @@ export default class Presentation extends React.Component {
 					theme={theme}
 				>
 					<Slide transition={['spin']} bgColor="primary">
-						<Heading textColor="tertiary" size={2}>
-							Swashata Ghosh
-						</Heading>
-						<br />
-						<Heading size={4}>🤗 Hello everyone!!! 🤗</Heading>
-						<List>
-							<ListItem>
-								Twitter: <code>@swashata</code>
-							</ListItem>
-							<ListItem>
-								Email: <code>s@swas.io</code>
-							</ListItem>
-							<ListItem>
-								GitHub: <code>swashata</code>
-							</ListItem>
-							<ListItem>
-								Blog: <code>swas.io</code>
-							</ListItem>
-						</List>
-						<Heading size={4}>I ❤️ WordPress & JavaScript.</Heading>
+						<Image src={cover} />
 					</Slide>
 
 					<Slide transition={['zoom']} bgColor="primary">
@@ -166,6 +148,44 @@ export default class Presentation extends React.Component {
 								easier large-scale software development.
 							</ListItem>
 						</List>
+						<Text textColor="primary">
+							<code>exploringjs.com</code>
+						</Text>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="pink"
+						>
+							SASS
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textSize={32}
+							textColor="tertiary"
+						>
+							CSS with superpowers
+						</Heading>
+						<List>
+							<ListItem>super-set of CSS.</ListItem>
+							<ListItem>
+								sweet features to make CSS scale.
+							</ListItem>
+							<ListItem>
+								battle tested and industry approved.
+							</ListItem>
+						</List>
+						<Text textColor="primary">
+							<code>sass-lang.com</code>
+						</Text>
 					</Slide>
 
 					{/* <Slide
@@ -223,7 +243,7 @@ export default class Presentation extends React.Component {
 						</Appear>
 					</Slide> */}
 
-					<Slide
+					{/* <Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -276,9 +296,9 @@ export default class Presentation extends React.Component {
 								/>
 							</div>
 						</Appear>
-					</Slide>
+					</Slide> */}
 
-					<Slide
+					{/* <Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -296,13 +316,12 @@ export default class Presentation extends React.Component {
 							</Appear>
 							<Appear>
 								<ListItem>
-									easy to (unit) test in separation.
+									easy to unit test in separation.
 								</ListItem>
 							</Appear>
 							<Appear>
 								<ListItem>
-									easy to integration test main app under
-									JSDOM/JEST.
+									easy to integration test main app or parts.
 								</ListItem>
 							</Appear>
 							<Appear>
@@ -311,7 +330,7 @@ export default class Presentation extends React.Component {
 								</ListItem>
 							</Appear>
 						</List>
-					</Slide>
+					</Slide> */}
 
 					<Slide
 						transition={['fade']}
@@ -365,9 +384,12 @@ export default class Presentation extends React.Component {
 								/>
 							</div>
 						</Appear>
+						<Text textColor="primary">
+							<code>npmjs.com</code>
+						</Text>
 					</Slide>
 
-					<Slide
+					{/* <Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -429,9 +451,9 @@ export default class Presentation extends React.Component {
 								/>
 							</div>
 						</Appear>
-					</Slide>
+					</Slide> */}
 
-					<Slide
+					{/* <Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -452,7 +474,7 @@ export default class Presentation extends React.Component {
 						>
 							but most importantly!!
 						</Heading>
-					</Slide>
+					</Slide> */}
 
 					<Slide>
 						<Heading
@@ -528,6 +550,28 @@ export default class Presentation extends React.Component {
 							caps
 							textColor="pink"
 						>
+							Tooling
+						</Heading>
+						<Heading
+							margin="0 auto 50px auto"
+							size={4}
+							textColor="tertiary"
+						>
+							for js, css and bundling
+						</Heading>
+					</Slide>
+
+					<Slide
+						transition={['fade']}
+						bgColor="secondary"
+						textColor="primary"
+					>
+						<Heading
+							margin="0 auto 20px auto"
+							size={1}
+							caps
+							textColor="pink"
+						>
 							#1. Babel
 						</Heading>
 						<Heading
@@ -563,17 +607,12 @@ export default class Presentation extends React.Component {
 							textSize={32}
 							textColor="tertiary"
 						>
-							CSS with superpowers
+							<code>LibSass</code> or <code>Dart Sass</code>
 						</Heading>
 						<List>
-							<ListItem>super-set of CSS.</ListItem>
-							<ListItem>
-								sweet features to make CSS scale.
-							</ListItem>
-							<ListItem>
-								compile sass to css with <code>node-sass</code>{' '}
-								or <code>dart-sass</code>.
-							</ListItem>
+							<ListItem>compile SASS to CSS.</ListItem>
+							<ListItem>incredible speed.</ListItem>
+							<ListItem>automation.</ListItem>
 						</List>
 					</Slide>
 
@@ -612,7 +651,7 @@ export default class Presentation extends React.Component {
 							</Appear>
 							<Appear>
 								<ListItem>
-									can use babel, node-sass under the hood.
+									can use babel and sass compiler.
 								</ListItem>
 							</Appear>
 						</List>
@@ -715,47 +754,42 @@ export default class Presentation extends React.Component {
 						textColor="primary"
 					>
 						<Heading
-							margin="0 auto 50px auto"
-							size={4}
-							textSize={32}
+							size={6}
+							// textSize={48}
 							bold={false}
 							textColor="tertiary"
 						>
-							so I have to configure babel? webpack? node-sass?
+							so we have to configure babel? webpack? node-sass?
 							flipity flop? fluppity floop?
 						</Heading>
 						<Appear>
 							<Heading
-								margin="0 auto 50px auto"
-								size={4}
-								textSize={32}
+								size={6}
+								// textSize={48}
 								bold={false}
 								textColor="tertiary"
 							>
-								and I have to do that everytime I start a
-								project?
+								and we have to do that everytime?
 							</Heading>
 						</Appear>
 						<Appear>
 							<Heading
-								margin="0 auto 50px auto"
-								size={4}
-								textSize={32}
+								size={6}
+								// textSize={48}
 								bold={false}
 								textColor="tertiary"
 							>
-								how do I tell WP to use stuff from webpack?
+								how do we tell WP to use stuff from webpack?
 							</Heading>
 						</Appear>
 						<Appear>
 							<Heading
-								margin="0 auto 50px auto"
-								size={4}
-								textSize={32}
+								size={6}
+								// textSize={48}
 								bold={false}
 								textColor="tertiary"
 							>
-								how do I have webpack-dev-server for HMR?
+								how do we have webpack-dev-server for HMR?
 							</Heading>
 						</Appear>
 						<Appear>
@@ -803,31 +837,36 @@ export default class Presentation extends React.Component {
 								</em>
 							</Heading>
 						</Appear>
-						<List>
-							<Appear>
+						<Appear>
+							<Heading
+								margin="0 auto 50px auto"
+								size={4}
+								textSize={32}
+								textColor="primary"
+							>
+								develop modern large-scale front-end heavy
+								WordPress plugins and themes
+							</Heading>
+						</Appear>
+						<Appear>
+							<List>
 								<ListItem>
 									out of the box babel, sass and more.
 								</ListItem>
-							</Appear>
-							<Appear>
 								<ListItem>
 									works with any local wp dev server.
 								</ListItem>
-							</Appear>
-							<Appear>
 								<ListItem>
 									integrate with any project you have.
 								</ListItem>
-							</Appear>
-							<Appear>
 								<ListItem>
-									proxy dev server with live reload and HMR.
+									dev server with live reload and HMR.
 								</ListItem>
-							</Appear>
-						</List>
+							</List>
+						</Appear>
 					</Slide>
 
-					{/* <Slide
+					<Slide
 						transition={['fade']}
 						bgColor="secondary"
 						textColor="primary"
@@ -841,6 +880,7 @@ export default class Presentation extends React.Component {
 							Integrate
 						</Heading>
 						<List>
+							<ListItem>Install nodejs.</ListItem>
 							<ListItem>
 								Add -{' '}
 								<Code textColor="pink">npx @wpackio/cli</Code>
@@ -867,7 +907,7 @@ export default class Presentation extends React.Component {
 								<Code textColor="pink">npm run archive</Code>
 							</ListItem>
 						</List>
-					</Slide> */}
+					</Slide>
 
 					<Slide
 						transition={['fade']}
@@ -902,7 +942,7 @@ export default class Presentation extends React.Component {
 						</Link>
 					</Slide>
 
-					<Slide>
+					{/* <Slide>
 						<Heading
 							margin="0 auto 20px auto"
 							size={2}
@@ -935,7 +975,7 @@ export default class Presentation extends React.Component {
 								</ListItem>
 							</Appear>
 						</List>
-					</Slide>
+					</Slide> */}
 
 					<Slide
 						transition={['fade']}
@@ -1084,6 +1124,13 @@ export default class Presentation extends React.Component {
 					>
 						<Heading size={1} caps textColor="pink">
 							Q/A
+						</Heading>
+						<Heading
+							margin="20px auto 0 auto"
+							size={2}
+							textColor="tertiary"
+						>
+							🐦 ☕
 						</Heading>
 					</Slide>
 				</Deck>

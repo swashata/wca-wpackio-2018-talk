@@ -1,3 +1,22 @@
+## Intro
+
+Hello everyone, I am Swashata Ghosh. I would like to say it feels awesome to be
+here. This is my first talk so I just hope I don't choke before the time runs
+out.
+
+So, you can find me on twitter, github by the handle @swashata and I love WordPress
+and I love JavaScript.
+
+---
+
+## Title
+
+That being said, today I wanna talk about and I wanna show you some front-end
+tooling for WordPress themes and plugins and more over the developer experience
+it brings. Hopefully not the like the one in the gif.
+
+---
+
 ## Modern Front-end terrain
 
 front-end web development involves JavaScript, CSS and HTML.
@@ -6,89 +25,97 @@ So we are going to see newer language features, development tooling around
 these languages. Also how the tooling helps us develop large scale web
 application.
 
+---
+
 ## ES6/ECMAScript2015
 
-The first thing that I wanna talk about is ES6. ES6 refers to the version 6
-of ECMAScript programming language that was released in the year 2015.
-Hence also the name ECMA2015.
+About newer language features, the first thing that comes is ES6.
+
+ES6 refers to the version 6 of ECMAScript programming language that was released
+in the year 2015. Hence also the name ECMAScript2015.
 
 Now ECMAScript is the standardized name of JavaScript.
 
-ES6 is a huge leap because it was released almost 4 years after the
-version 5 of javascript, released back in the year 2011.
-
-The goal of ES6 and newer versions are to provide language features
+The goal of ES6 and newer versions is to provide language features
 to ease-up developing large-scale web applications.
 
-## Modules
+---
 
-It is a module system which let's us split code into
-multiple reusable chunks. Then we simply import the chunk as we need and when
-we need.
+## SASS
 
-Let's say we have a function called `mountApplication`. Now we can write a file
-`app.js` and have the file `export` the function for other modules.
+Next, for styles we have languages like SASS, LESS etc, but we will talk about
+SASS today.
 
-## Modular Codebase
+SASS is unique in it's way because, it is a super-set of CSS. Meaning, although
+SASS is a different language which compiles down to CSS, every existing CSS
+file you have, is also a valid SASS file.
 
-There are many immediate benefits from having this kind of modular codebase.
+It provides many features to make CSS scale for large applications. Over the year
+it has been battle tested and approved by the industry.
 
--   multiple team members can work on multiple parts or multiple files of the
-    app without raising too much conflicts.
--   We can unit test individual modules separately as needed.
--   We can import the main entry-point of the app or perhaps an important part
-    of the app and have it integration tested with tools like JEST and JSDOM.
--   When your application grows bigger, you will often find yourself extracting
-    reusable functions within different modules. It scales really well.
+---
 
 ## NPM Package
 
-Then there is `npmjs.com` from where you can consume thousands of open source
+Then there is `npmjs.com` from where we can consume thousands of open source
 and well maintained javascript or css libraries from the community.
 
 If we wanted to use say, lodash and axios to fetch some data and show to the
 user, we would simply install the libraries with `npm i lodash axios`.
 
-Now we can seamlessly consume the libraries within our application with the
-same ES6 module system.
+Now we can consume them like any other ES6 Module.
 
-## Code Splitting
+---
 
-There is this concept call Dynamic Import. What we do here is load just the
-critical part of our javascript code during the first-paint or first render of
-our application.
+## Awesome DX
 
-Then based on user interaction, we load and execute the code we need.
+Everything together provides great many benefits. But what we will see today is
+the developer experience it brings to the table.
 
-For example, we might have a button somewhere in the page and only if user
-clicks on that button, we need the application code and execute it.
+---
 
-Using dynamic import, it is now possible.
+## What is DX?
 
-In the example, we add an event listener to the button on `click`. When that
-happens, we `import` the app and then we execute it.
+Now what really is DX? What it means to us, the developers. Put simply it is
+the experience we get when we, the developers, use something to develop an application.
 
-This concept really works good to shrink the load time of larger apps.
+It could be the language itself, tooling, editor or perhaps how we build the app
+or deploy it.
+
+When we, WordPress developers are creating a plugin or a theme, how often do
+we find ourselves changing a javascript, PHP or a CSS file and then refreshing
+the browser to check the output?
+
+So the question is, can modern front-end tooling improve this experience? If so,
+how?
+
+---
+
+## Tooling
+
+Now let us quickly check three tooling which are very popular among front-end
+developers today.
+
+---
 
 ## Babel
 
-Babel is a javascript compiler to help you use next generation javascript
+Babel is a javascript compiler to help us use next generation javascript
 today.
 
 Not all browsers support newer ES features. Luckily, we can compile them for
 older versions of ECMAScript.
 
-With babel, you can write your code with the latest, even upcoming javascript
-features and have it compiled down targeting the browsers of your audience.
+With babel, we can write our code with the latest, even upcoming javascript
+features and have it compiled down targeting the browsers of our audience.
 
 ## SASS
 
-SASS is a super-set language of CSS, which brings many missing features.
+For SASS, we have multiple compilers, among which LibSass and Dart Sass are
+officially supported and very popular.
 
-These features are handy to make CSS scale for large applications.
-
-Now browsers don't understand SASS. So we have tooling like `node-sass` or
-`dart-sass` to compile SASS to CSS.
+Both of them compile SASS to CSS at incredible speed. They also provide
+automation techniques which we are going to see.
 
 ## Webpack
 
@@ -96,9 +123,235 @@ Finally webpack, which brings everything together.
 
 It is a static module bundler for modern javascript application.
 
-You can have modular javascript and css code. It can handle all sorts of assets
+We can have modular javascript and css code. It can handle all sorts of assets
 like fonts, images through different loaders.
 
-And it can use babel and node-sass under the hood.
+And it can use babel and sass compiler under the hood.
+
+---
 
 ## Setup
+
+To setup an application with webpack, we first create an entry-point javascript
+file. This file imports other modules and starts the execution of our app.
+
+Then we tell webpack to use the entry-point and combine and bundle the dependencies
+by running them through different loaders.
+
+We can also use webpack-dev-server to get a fast, live reloading development
+server with Hot Module Replacement capabilities.
+
+Now what is HMR? Let us see an example.
+
+---
+
+## Demo
+
+So here is a simple todo application. The whole application is front-end only
+written in javascript and sass and I have used a very popular javascript library
+react.
+
+Now without going much into implementation detail, let us quickly see how things
+fit together.
+
+[app.js]
+First we have our application entry-point app.js, which imports dependencies
+from `node_modules`, sass files and our own application files.
+
+It adds an event listener to the document which when ready, would ask react dom
+to render our application on a DOM node.
+
+Now we already have the tooling set. The tooling involves webpack, babel and
+node-sass.
+
+webpack-dev-server serves our index.html file and the assets generated by webpack.
+
+Let's start it up by executing `npm run start`.
+
+...
+
+[run npm start]
+Now we have our application running from a local server, all thanks to webpack
+and webpack dev server. So what happens when we change something?
+
+Perhaps we would like to change the title? Let's do that.
+
+[change TodoApp/index.jsx]
+
+As I am going to hit the save button, please keep your attention at the browser.
+
+It got automatically changed right? We didn't refresh!
+
+And did you notice there wasn't even a page reload?
+
+So what really happened there?
+
+[app.js]
+
+Firstly, when something changes, webpack detects it. It recompiles our changed
+source automatically and also lets webpack-dev-server know about it.
+
+In our app.js, which is the entry-point, we have HMR implemented. It is a way
+of telling webpack-dev-server that, if something changes from `src/TodoApp`,
+then don't reload the browser. Instead we would like to require the new compiled
+component and have react dom, render it again on our target node.
+
+---
+
+## Can we do that?
+
+So that was some good DX right! Then here's my question, can we have that with
+WordPress? Can we have webpack and webpack-dev-server and HMR with WordPress?
+
+And if the answer is, YES...
+
+---
+
+## Config?
+
+Does it mean, we have to like configure webpack, babel, node-sass and all those
+tooling?
+
+And we have to do that every-time we start a project?
+
+And how do we even enqueue that within WordPress. How WordPress would know
+which file webpack generated and how is it doing all the HMR? I mean we saw
+that HMR is something provided by webpack-dev-server. But our WordPress is already
+being served from a server?
+
+Well let us see.
+
+---
+
+## wpack.io
+
+Let me show you a tooling that we have been working on. It is called
+wpack.io. It is OSS and MIT licensed.
+
+It provides you the tooling to develop modern, large-scale, front-end heavy
+WordPress plugins and themes.
+
+Under the hood it uses webpack and browser-sync.
+
+It works with any local WordPress development server you might have.
+
+You can integrate with any on-going projects.
+
+It does provide a dev server with all the HMR goodies. That
+dev server is basically a proxy of your WordPress server.
+
+---
+
+## Integrate
+
+To start using wpack.io, first you need to install nodejs. It comes with a
+command called `npx`. Simply run `npx @wpackio/cli` to install all the tooling
+dependencies onto your project.
+
+Then run `npm run bootstrap` from your project directory to configure the
+tooling.
+
+We would also need a small composer PHP dependency to consume the javascript
+and css files within WordPress.
+
+Now let us see, how this is going to work.
+
+---
+
+## Demo
+
+So here we are trying to port the todo application inside a WordPress Plugin
+through shortcodes.
+Now this project is already bootstrapped. So we have all the configurations set.
+
+These are the things to notice here.
+
+[show app.js]
+First, we have app.js which is the entry-point of our application. We tell
+the tooling about it through `wpackio.project.js` file. We have mentioned the
+relative path to the file through `files` configuration.
+
+[show class-wpackio-plugin-init.php]
+Now our react application is put together through a shortcode. If we see the main
+plugin file, then here's the initialization of the shortcode. It returns a `div`
+with an ID where our react application mounts.
+
+With the help of the PHP library it also enqueues the javascript and css assets.
+
+[show wpackio.server.js]
+Now only thing left is to tell wpackio-scripts about our own WP installation URL.
+Here I am using vvv which gives me a WordPress server at wca.test.
+But it could be anything, perhaps docker, or wamp or mamp.
+
+[run command]
+So let us run the command and see what happens.
+
+Okay it's all there right? Now Let's change the title.
+
+[show TodoApp/index.jsx]
+Yay!! It's working...
+
+So let's stop the development server and create some production build.
+
+[press ctrl+c]
+We press q or ctrl+c.
+
+[run npm run build]
+
+And we run `npm run build`.
+
+[open wca.test]
+Let's open our WordPress URL directly here.
+
+Alright awesome todos.
+
+What if we wanted to create a distributable zip file?
+
+Well that is one single command away too.
+
+[run npm run archive]
+
+And that's all the tooling is going to help you with.
+
+---
+
+## Was it fun?
+
+So let me ask you this. Was it fun? Did you like how we can develop front-end
+heavy WordPress themes and plugins?
+
+---
+
+## Recap
+
+Let's take a step back and revisit what we have seen today.
+
+Front-end tooling is
+
+[read from presentation].
+
+---
+
+## Thank you
+
+Thank you everyone, for following through my presentation here. I know I have
+messed a few things up and hopefully I won't, when we all come
+back next year, yeah?
+
+And I would like to thank the awesome organizers of WCA, who gave me the opportunity
+to speak here. Really thank you everyone.
+
+---
+
+## Notes
+
+And before we begin our Q/A, let me tell you that you can access the slides
+and all the demos from wca.wpack.io.
+
+---
+
+## QA
+
+So yeah, that was all I wanted to present to you. If you have any questions
+please ask me on twitter or through email or just ask me in person during the
+tea break.

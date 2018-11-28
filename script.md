@@ -382,3 +382,53 @@ can be found at these URLs.
 
 So yeah, that was all I wanted to present to you. We have 10 mins for QA so please
 ask me anything that comes to your mind.
+
+## Modules
+
+It is a system which let's us split code into multiple reusable chunks.
+Then we simply import the chunk as we need and when we need.
+
+Let's say we have a function called `mountApplication`. Now we can write a file
+`app.js` and have the file `export` the function for other modules.
+
+---
+
+## Modular Codebase
+
+There are many immediate benefits from having this kind of modular codebase.
+
+-   multiple team members can work on multiple parts or multiple files of the
+    app without raising too much conflicts.
+-   We can unit test individual modules separately as needed.
+-   We can import the main entry-point of the app or perhaps an important part
+    of the app and have it integration tested with tools like JEST, along with JSDOM.
+-   When your application grows bigger, you will often find yourself extracting
+    reusable functions within different modules. It scales really well.
+
+
+## Code Splitting
+
+There is this concept call Dynamic Import. What we do here is load just the
+critical part of our javascript code during the first-paint or first render of
+our application.
+
+Then based on user interaction, we load and execute the code we need.
+
+For example, we might have a button somewhere in the page and only if user
+clicks on that button, we need the application code and execute it.
+
+Using dynamic import, it is now possible.
+
+In the example, we add an event listener to the button on `click`. When that
+happens, we `import` the app and then we execute it.
+
+This concept really works good to shrink the load time of larger apps.
+
+---
+
+## And More
+
+And there are many many more advantages we get. But I want to talk about one
+thing the most and that is...
+
+---
